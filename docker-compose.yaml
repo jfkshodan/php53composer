@@ -1,0 +1,11 @@
+version: '3'
+services:
+    php53:
+        image: "php53composer"
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "8888:80"
+        volumes:
+            - ".:/var/www/html"
